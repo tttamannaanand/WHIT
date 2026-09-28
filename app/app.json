@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Whit",
+    "slug": "whit",
+    "scheme": "whit",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#2A1E36"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "whit.com"
+    },
+    "android": {
+      "package": "whit.com",
+      "adaptiveIcon": {
+        "backgroundColor": "#2A1E36"
+      }
+    },
+    "extra": {
+      "apiBaseUrl": "http://localhost:4000",
+      "revenueCatApiKeyIos": "test_mWPcnQdEClinqgQRHBxHCcUVcdv",
+      "revenueCatApiKeyAndroid": "test_mWPcnQdEClinqgQRHBxHCcUVcdv"
+    }
+  }
+}
