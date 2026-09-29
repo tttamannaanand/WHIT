@@ -16,6 +16,22 @@ whit/
 Read `REVENUECAT_SETUP.md` for the subscription/payment wiring. This file
 just gets both halves running locally.
 
+
+## Shipaton 2026: Next Gen Award submission
+
+- **Demo video:** [`screenshots/whit-demo.mp4`](screenshots/whit-demo.mp4): sign up, read today's lesson, quiz, paywall, RevenueCat Test Store purchase, and the archive unlocking
+- **Screenshots (1179×2556):** [`screenshots/submission/`](screenshots/submission/)
+- **App icon (1024×1024):** [`app/assets/icon.png`](app/assets/icon.png)
+- **Monetization:** RevenueCat SDK (`react-native-purchases`), `whit_pro` entitlement, `default` offering with Monthly / Yearly (7-day free trial) / Lifetime packages. The backend re-checks entitlement status with RevenueCat's REST API before serving any archived lesson.
+- **License:** MIT (see [`LICENSE`](LICENSE))
+
+<p>
+  <img src="screenshots/submission/01-today.png" width="180">
+  <img src="screenshots/submission/02-lesson.png" width="180">
+  <img src="screenshots/submission/05-paywall.png" width="180">
+  <img src="screenshots/submission/06-archive-premium.png" width="180">
+</p>
+
 ---
 
 ## 1. Backend first

@@ -76,11 +76,11 @@ export function HomeScreen({ navigation }: Props) {
           <View style={styles.streakCard}>
             <View>
               <Text style={styles.streakCardLabel}>Current streak</Text>
-              <Text style={styles.streakCardValue}>{user?.currentStreak ?? 0} days</Text>
+              <Text style={styles.streakCardValue}>{user?.currentStreak ?? 0} {(user?.currentStreak ?? 0) === 1 ? 'day' : 'days'}</Text>
             </View>
             <View>
               <Text style={styles.streakCardLabel}>Longest streak</Text>
-              <Text style={styles.streakCardValue}>{user?.longestStreak ?? 0} days</Text>
+              <Text style={styles.streakCardValue}>{user?.longestStreak ?? 0} {(user?.longestStreak ?? 0) === 1 ? 'day' : 'days'}</Text>
             </View>
           </View>
         </View>

@@ -7,12 +7,15 @@ import { colors } from '../theme/colors';
 import { BottomNav } from '../components/BottomNav';
 import { PrimaryButton } from '../components/PrimaryButton';
 import { api, LessonSummary } from '../lib/api';
+import { useAuth } from '../lib/auth-context';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Archive'>;
 
 export function ArchiveScreen({ navigation }: Props) {
   const [lessons, setLessons] = useState<LessonSummary[]>([]);
   const [loading, setLoading] = useState(true);
+  const { user } = useAuth();
+  const isPremium = !!user?.isPremium;
 
   useFocusEffect(
     useCallback(() => {
@@ -41,8 +44,9 @@ export function ArchiveScreen({ navigation }: Props) {
       <View style={styles.header}>
         <Text style={styles.title}>Archive</Text>
         <Text style={styles.subtitle}>
-          Free access is today's lesson only. Unlock Premium to reread anything you've finished and
-          browse every past lesson.
+          {isPremium
+            ? 'You have full access. Reread anything you\'ve finished and browse every past lesson.'
+            : 'Free access is today\'s lesson only. Unlock Premium to reread anything you\'ve finished and browse every past lesson.'}
         </Text>
       </View>
 
@@ -66,11 +70,13 @@ export function ArchiveScreen({ navigation }: Props) {
             </Pressable>
           ))}
 
-          <PrimaryButton
-            title="Unlock full access"
-            style={{ marginTop: 4 }}
-            onPress={() => navigation.navigate('Paywall', { reason: 'archive' })}
-          />
+          {isPremium ? null : (
+            <PrimaryButton
+              title="Unlock full access"
+              style={{ marginTop: 4 }}
+              onPress={() => navigation.navigate('Paywall', { reason: 'archive' })}
+            />
+          )}
         </ScrollView>
       )}
 

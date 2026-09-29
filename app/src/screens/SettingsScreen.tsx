@@ -49,7 +49,7 @@ export function SettingsScreen({ navigation }: Props) {
         <View style={styles.statsCard}>
           <View>
             <Text style={styles.statLabel}>Current streak</Text>
-            <Text style={styles.statValue}>{user?.currentStreak ?? 0} days</Text>
+            <Text style={styles.statValue}>{user?.currentStreak ?? 0} {(user?.currentStreak ?? 0) === 1 ? 'day' : 'days'}</Text>
           </View>
           <View>
             <Text style={styles.statLabel}>Lessons done</Text>
