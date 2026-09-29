@@ -1,4 +1,5 @@
 import React from 'react';
+import { LogBox } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { AuthProvider } from './src/lib/auth-context';
@@ -11,6 +12,9 @@ import { configurePurchases } from './src/lib/purchases';
 // effects fire before a parent's own useEffect, so doing this in App's
 // useEffect would race and sometimes lose.
 configurePurchases();
+
+// Keep the dev-only warning toast out of demo recordings.
+LogBox.ignoreAllLogs();
 
 export default function App() {
   return (

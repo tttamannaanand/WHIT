@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     gap: 14,
   },
   avatar: { width: 48, height: 48, borderRadius: 24, backgroundColor: colors.mauve, alignItems: 'center', justifyContent: 'center' },
-  avatarText: { fontSize: 20, fontStyle: 'italic', fontWeight: '700', color: colors.ink },
+  avatarText: { fontSize: 20, fontWeight: '700', color: colors.ink },
   profileName: { fontSize: 15, fontWeight: '700', color: colors.ink },
   profileEmail: { fontSize: 12, color: colors.textMuted, marginTop: 2 },
   chevron: { color: colors.textMuted, fontSize: 18 },

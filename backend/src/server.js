@@ -30,7 +30,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4100;
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`Whit backend listening on http://localhost:${PORT}`);

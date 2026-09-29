@@ -47,7 +47,7 @@ cp .env.example .env
 npm install
 npm run seed     # loads the 30 lessons from data/lessons_source.json into SQLite
 npm test         # 11 tests, covers auth, the paywall gating rule, billing sync, webhooks
-npm start         # listens on PORT from .env (default 4000)
+npm start         # listens on PORT from .env (default 4100)
 ```
 
 Leave this running — the app talks to it over HTTP.
@@ -58,7 +58,7 @@ Edit `app/app.json` → `expo.extra`:
 
 ```json
 "extra": {
-  "apiBaseUrl": "http://localhost:4000",
+  "apiBaseUrl": "http://localhost:4100",
   "revenueCatApiKeyIos": "appl_xxxx...",
   "revenueCatApiKeyAndroid": "goog_xxxx..."
 }
@@ -66,7 +66,7 @@ Edit `app/app.json` → `expo.extra`:
 
 - `apiBaseUrl`: if you're running the app on a physical device (not a
   simulator), `localhost` won't reach your laptop — use your machine's LAN
-  IP instead (e.g. `http://192.168.1.23:4000`).
+  IP instead (e.g. `http://192.168.1.23:4100`).
 - The two RevenueCat keys are **public** SDK keys (safe in the app). Get
   them from RevenueCat once you've done step 4 of `REVENUECAT_SETUP.md`.
   Leaving them as placeholders is fine — `purchases.ts` detects the

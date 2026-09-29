@@ -34,6 +34,7 @@ export function LoginScreen({ navigation }: Props) {
 
   return (
     <SafeAreaView style={styles.screen}>
+      <View style={styles.inner}>
       <Pressable onPress={() => navigation.goBack()} style={styles.back} accessibilityLabel="Back">
         <Text style={styles.backArrow}>{'‹'}</Text>
       </Pressable>
@@ -69,12 +70,14 @@ export function LoginScreen({ navigation }: Props) {
       {error ? <Text style={styles.error}>{error}</Text> : null}
 
       <PrimaryButton title="Log in" loading={loading} onPress={onSubmit} style={{ marginTop: 8 }} />
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  screen: { flex: 1, backgroundColor: colors.cream, padding: 24 },
+  screen: { flex: 1, backgroundColor: colors.cream },
+  inner: { flex: 1, padding: 24 },
   back: { marginBottom: 20 },
   backArrow: { fontSize: 28, color: colors.ink },
   title: { fontSize: 28, fontWeight: '700', color: colors.ink, marginBottom: 24 },

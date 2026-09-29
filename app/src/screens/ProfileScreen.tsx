@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   content: { flex: 1, padding: 24, gap: 20 },
   avatarWrap: { alignItems: 'center', gap: 10 },
   avatar: { width: 84, height: 84, borderRadius: 42, backgroundColor: colors.mauve, alignItems: 'center', justifyContent: 'center' },
-  avatarText: { fontSize: 32, fontStyle: 'italic', fontWeight: '700', color: colors.ink },
+  avatarText: { fontSize: 32, fontWeight: '700', color: colors.ink },
   form: { gap: 16 },
   fieldLabel: { fontSize: 12, fontWeight: '700', color: colors.textSecondary, marginBottom: 6 },
   input: {

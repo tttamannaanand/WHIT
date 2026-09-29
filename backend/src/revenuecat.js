@@ -6,7 +6,7 @@ require('dotenv').config();
 const fetch = require('node-fetch');
 
 const SECRET_KEY = process.env.REVENUECAT_SECRET_API_KEY;
-const ENTITLEMENT_ID = process.env.REVENUECAT_ENTITLEMENT_ID || 'premium';
+const ENTITLEMENT_ID = process.env.REVENUECAT_ENTITLEMENT_ID || 'whit_pro';
 const BASE_URL = 'https://api.revenuecat.com/v1';
 
 /**

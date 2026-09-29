@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { View, Text, StyleSheet, SafeAreaView, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, ActivityIndicator, Image } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { RootStackParamList } from '../navigation/types';
@@ -41,7 +41,7 @@ export function HomeScreen({ navigation }: Props) {
   return (
     <SafeAreaView style={styles.screen}>
       <View style={styles.header}>
-        <View style={styles.logo} />
+        <Image source={require('../../assets/icon.png')} style={styles.logo} />
         <View style={styles.streakPill}>
           <Text style={styles.streakText}>Day {dayNumber}</Text>
         </View>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  logo: { width: 22, height: 22, borderRadius: 6, backgroundColor: colors.ink },
+  logo: { width: 28, height: 28, borderRadius: 7 },
   streakPill: { backgroundColor: colors.mauve, borderRadius: 999, paddingHorizontal: 14, paddingVertical: 6 },
   streakText: { fontSize: 13, fontWeight: '700', color: colors.ink },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },

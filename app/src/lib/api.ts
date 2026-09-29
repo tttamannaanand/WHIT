@@ -1,7 +1,7 @@
 import Constants from 'expo-constants';
 
 const API_BASE_URL: string =
-  (Constants.expoConfig?.extra?.apiBaseUrl as string | undefined) ?? 'http://localhost:4000';
+  (Constants.expoConfig?.extra?.apiBaseUrl as string | undefined) ?? 'http://localhost:4100';
 
 export type ApiUser = {
   id: string;

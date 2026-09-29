@@ -23,7 +23,7 @@ Connect / Play Console approval screens.
                              ▼
                           RevenueCat validates the receipt
                           with Apple/Google, activates the
-                          "premium" entitlement
+                          "whit_pro" entitlement
                              │
               ┌──────────────┴───────────────┐
               ▼                               ▼
@@ -85,12 +85,12 @@ in RevenueCat — RevenueCat reads products you've already created there.
 
 Back in RevenueCat:
 
-1. **Entitlements** → create one called `premium`. This is the identifier
+1. **Entitlements** → create one called `whit_pro`. This is the identifier
    the backend already expects — `backend/.env`'s
-   `REVENUECAT_ENTITLEMENT_ID` defaults to `premium`, matching
+   `REVENUECAT_ENTITLEMENT_ID` defaults to `whit_pro`, matching
    `revenuecat.js`.
 2. **Products** → attach both store products (`whit_premium_monthly`,
-   `whit_premium_annual`) to the `premium` entitlement.
+   `whit_premium_annual`) to the `whit_pro` entitlement.
 3. **Offerings** → create (or use the default) Offering, and add both
    products as **Packages** inside it — a `$rc_monthly` package and a
    `$rc_annual` package. This is what `PaywallScreen.tsx` renders: it calls
