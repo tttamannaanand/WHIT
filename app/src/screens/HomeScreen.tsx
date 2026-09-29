@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   error: { color: colors.danger, textAlign: 'center', paddingHorizontal: 24 },
   content: { flex: 1, padding: 20, gap: 14 },
   eyebrow: { fontSize: 13, fontWeight: '500', color: colors.textMuted, textTransform: 'uppercase', letterSpacing: 1 },
-  title: { fontSize: 30, fontStyle: 'italic', fontWeight: '700', color: colors.ink, lineHeight: 36 },
+  title: { fontSize: 30, fontWeight: '700', color: colors.ink, lineHeight: 36 },
   metaRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   categoryPill: { backgroundColor: colors.successBg, borderRadius: 999, paddingHorizontal: 10, paddingVertical: 5 },
   categoryText: { color: colors.success, fontSize: 12, fontWeight: '700' },

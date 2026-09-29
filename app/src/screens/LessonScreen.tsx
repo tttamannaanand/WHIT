@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
   },
   categoryText: { color: colors.success, fontSize: 12, fontWeight: '700' },
-  title: { fontSize: 26, fontStyle: 'italic', fontWeight: '700', color: colors.ink, lineHeight: 32 },
+  title: { fontSize: 26, fontWeight: '700', color: colors.ink, lineHeight: 32 },
   paragraph: { fontSize: 15, lineHeight: 24, color: '#3E2E38' },
   footer: { padding: 20, borderTopWidth: 1, borderTopColor: colors.border },
 });

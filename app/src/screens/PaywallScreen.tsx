@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   close: { padding: 20, alignItems: 'flex-end' },
   closeIcon: { color: colors.textMuted, fontSize: 16 },
   content: { flex: 1, paddingHorizontal: 24, paddingBottom: 24, gap: 18 },
-  title: { fontSize: 32, fontStyle: 'italic', fontWeight: '700', color: colors.cream },
+  title: { fontSize: 32, fontWeight: '700', color: colors.cream },
   subtitle: { fontSize: 14, color: colors.mauve, lineHeight: 20 },
   benefits: { gap: 12 },
   benefitRow: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },

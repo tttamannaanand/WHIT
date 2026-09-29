@@ -82,7 +82,7 @@ export function ArchiveScreen({ navigation }: Props) {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.cream },
   header: { paddingHorizontal: 20, paddingTop: 12, paddingBottom: 16 },
-  title: { fontSize: 30, fontStyle: 'italic', fontWeight: '700', color: colors.ink },
+  title: { fontSize: 30, fontWeight: '700', color: colors.ink },
   subtitle: { fontSize: 13, color: colors.textMuted, marginTop: 8, lineHeight: 19 },
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   list: { paddingHorizontal: 20, paddingBottom: 16, gap: 12 },

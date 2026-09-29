@@ -87,7 +87,7 @@ function Row({ label, onPress, last }: { label: string; onPress: () => void; las
 
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.cream },
-  title: { fontSize: 30, fontStyle: 'italic', fontWeight: '700', color: colors.ink, paddingHorizontal: 20, paddingTop: 12, paddingBottom: 16 },
+  title: { fontSize: 30, fontWeight: '700', color: colors.ink, paddingHorizontal: 20, paddingTop: 12, paddingBottom: 16 },
   content: { paddingHorizontal: 20, gap: 16, paddingBottom: 16 },
   profileCard: {
     backgroundColor: '#FFFFFF',

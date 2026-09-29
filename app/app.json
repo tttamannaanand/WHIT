@@ -10,7 +10,9 @@
     "splash": {
       "backgroundColor": "#2A1E36"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "whit.com"
@@ -22,9 +24,12 @@
       }
     },
     "extra": {
-      "apiBaseUrl": "http://localhost:4000",
+      "apiBaseUrl": "http://localhost:4100",
       "revenueCatApiKeyIos": "test_mWPcnQdEClinqgQRHBxHCcUVcdv",
       "revenueCatApiKeyAndroid": "test_mWPcnQdEClinqgQRHBxHCcUVcdv"
-    }
+    },
+    "plugins": [
+      "expo-asset"
+    ]
   }
 }

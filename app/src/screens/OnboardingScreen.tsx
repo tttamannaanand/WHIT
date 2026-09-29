@@ -37,7 +37,7 @@ export function OnboardingScreen({ navigation }: Props) {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.ink },
   content: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 40, gap: 20 },
-  title: { fontSize: 40, fontStyle: 'italic', fontWeight: '700', color: colors.cream },
+  title: { fontSize: 40, fontWeight: '700', color: colors.cream },
   tagline: { fontSize: 16, color: colors.mauve, textAlign: 'center' },
   body: { fontSize: 14, color: colors.textMuted, textAlign: 'center', lineHeight: 21, maxWidth: 280 },
   cta: { width: '100%', marginTop: 12 },

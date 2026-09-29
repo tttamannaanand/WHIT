@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.cream, padding: 24 },
   back: { marginBottom: 20 },
   backArrow: { fontSize: 28, color: colors.ink },
-  title: { fontSize: 28, fontStyle: 'italic', fontWeight: '700', color: colors.ink, marginBottom: 24 },
+  title: { fontSize: 28, fontWeight: '700', color: colors.ink, marginBottom: 24 },
   form: { gap: 16 },
   fieldLabel: { fontSize: 12, fontWeight: '700', color: colors.textSecondary, marginBottom: 6 },
   input: {

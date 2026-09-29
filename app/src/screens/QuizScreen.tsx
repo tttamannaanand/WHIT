@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   badgeCheck: { color: '#12241E', fontWeight: '700', fontSize: 18 },
   content: { flex: 1, padding: 20, gap: 18 },
   eyebrow: { fontSize: 13, fontWeight: '700', color: colors.textMuted, textTransform: 'uppercase', letterSpacing: 1 },
-  title: { fontSize: 26, fontStyle: 'italic', fontWeight: '700', color: colors.ink, marginTop: -8 },
+  title: { fontSize: 26, fontWeight: '700', color: colors.ink, marginTop: -8 },
   question: { fontSize: 16, fontWeight: '700', color: colors.ink, lineHeight: 22 },
   answerCard: {
     backgroundColor: colors.successBg,

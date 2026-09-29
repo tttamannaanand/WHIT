@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: colors.cream },
   header: { flexDirection: 'row', alignItems: 'center', gap: 14, paddingHorizontal: 20, paddingTop: 12 },
   backArrow: { fontSize: 26, color: colors.ink },
-  headerTitle: { fontSize: 22, fontStyle: 'italic', fontWeight: '700', color: colors.ink },
+  headerTitle: { fontSize: 22, fontWeight: '700', color: colors.ink },
   content: { flex: 1, padding: 24, gap: 20 },
   avatarWrap: { alignItems: 'center', gap: 10 },
   avatar: { width: 84, height: 84, borderRadius: 42, backgroundColor: colors.mauve, alignItems: 'center', justifyContent: 'center' },
