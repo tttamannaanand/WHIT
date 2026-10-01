@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whit · Daily Lessons</title>
+<meta name="description" content="Whit: one five-minute lesson a day. A React Native app with RevenueCat subscriptions, built for Shipaton 2026.">
+<link rel="icon" href="img/icon.png">
+<style>
+  :root {
+    --mauve: #D6B8BC; --ink: #2A1E36; --teal: #5C9C8C; --cream: #FAF6F6;
+    --border: #E4D8DA; --text2: #5C4C56; --muted: #977E86;
+    --bg: var(--cream); --fg: var(--ink); --card: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #1a1322; --fg: #f3ecee; --card: #241b2e; --border: #3a2e44; --text2: #c9b9c1; --muted: #a8929b; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  header { display: flex; align-items: center; gap: 12px; padding: 20px 0; }
+  header img { width: 40px; height: 40px; border-radius: 10px; }
+  header b { font-size: 20px; }
+  header nav { margin-left: auto; }
+  a { color: var(--teal); }
+  .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; padding: 32px 0 56px; }
+  h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.05; margin: 0 0 16px; letter-spacing: -0.02em; }
+  h1 em { font-style: normal; color: var(--teal); }
+  .lede { color: var(--text2); font-size: 19px; margin: 0 0 24px; max-width: 34ch; }
+  .btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 18px; border-radius: 12px; text-decoration: none; font-weight: 600; }
+  .btn.primary { background: var(--ink); color: var(--cream); }
+  .btn.ghost { border: 1px solid var(--border); color: var(--fg); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn.primary { background: var(--mauve); color: var(--ink); } }
+  video { width: 100%; max-width: 330px; justify-self: center; border-radius: 28px;
+    border: 8px solid var(--ink); background: var(--ink); box-shadow: 0 24px 60px rgba(42, 30, 54, .25); }
+  h2 { font-size: 26px; margin: 0 0 18px; }
+  section { padding: 40px 0; border-top: 1px solid var(--border); }
+  .shots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .shots figure { margin: 0; }
+  .shots img { width: 100%; border-radius: 16px; border: 1px solid var(--border); display: block; }
+  .shots figcaption { font-size: 14px; color: var(--muted); margin-top: 6px; text-align: center; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--text2); font-size: 15px; }
+  pre { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px;
+    overflow-x: auto; font-size: 14px; color: var(--text2); }
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; }
+    .shots { grid-template-columns: repeat(2, 1fr); }
+    .cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="img/icon.png" alt="">
+    <b>Whit</b>
+    <nav><a href="https://github.com/tttamannaanand/WHIT">GitHub</a></nav>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>A skill a day,<br><em>five minutes</em> at a time.</h1>
+      <p class="lede">One short lesson and a quick quiz every day. Today's lesson is always free. Subscribe to unlock the archive.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/tttamannaanand/WHIT">View the source</a>
+        <a class="btn ghost" href="#run">Run it yourself</a>
+      </div>
+    </div>
+    <video src="whit-demo.mp4" controls muted playsinline preload="metadata" poster="img/01-today.jpg"
+      aria-label="Demo: sign up, read today's lesson, take the quiz, subscribe and unlock the archive"></video>
+  </div>
+
+  <section>
+    <h2>Inside the app</h2>
+    <div class="shots">
+      <figure><img src="img/01-today.jpg" alt="Today screen with the day's lesson card" loading="lazy"><figcaption>Today</figcaption></figure>
+      <figure><img src="img/02-lesson.jpg" alt="Lesson: Why do we get déjà vu?" loading="lazy"><figcaption>Lesson</figcaption></figure>
+      <figure><img src="img/03-quiz.jpg" alt="Quiz question after the lesson" loading="lazy"><figcaption>Quiz</figcaption></figure>
+      <figure><img src="img/05-paywall.jpg" alt="Paywall with monthly, yearly and lifetime plans" loading="lazy"><figcaption>Paywall</figcaption></figure>
+      <figure><img src="img/06-archive-premium.jpg" alt="Archive unlocked after subscribing" loading="lazy"><figcaption>Archive</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>How it's built</h2>
+    <div class="cards">
+      <div class="card"><h3>Expo + TypeScript</h3><p>React Native app in strict TypeScript, with onboarding, lessons, quizzes, archive and profile screens.</p></div>
+      <div class="card"><h3>RevenueCat</h3><p><code>whit_pro</code> entitlement with Monthly, Yearly (7-day trial) and Lifetime packages, kept in sync by webhooks.</p></div>
+      <div class="card"><h3>Server-side paywall</h3><p>The Express API re-checks the entitlement with RevenueCat before serving any past lesson, so a modified client can't unlock the archive.</p></div>
+    </div>
+  </section>
+
+  <section id="run">
+    <h2>Run it yourself</h2>
+<pre>git clone https://github.com/tttamannaanand/WHIT.git && cd WHIT
+cd backend && cp .env.example .env && npm install && npm run seed && npm start
+cd ../app && npm install && npx expo start</pre>
+    <p style="color:var(--text2)">Full setup, including the RevenueCat dashboard steps, is in the <a href="https://github.com/tttamannaanand/WHIT#readme">README</a>.</p>
+  </section>
+
+  <footer>Built by Tamanna Anand for RevenueCat Shipaton 2026 · MIT licensed</footer>
+</div>
+</body>
+</html>
