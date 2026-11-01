@@ -1,5 +1,11 @@
 # Whit — daily micro-learning app
 
+[![CI](https://github.com/tttamannaanand/WHIT/actions/workflows/ci.yml/badge.svg)](https://github.com/tttamannaanand/WHIT/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+![Expo](https://img.shields.io/badge/Expo-React%20Native-000020?logo=expo)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
+![RevenueCat](https://img.shields.io/badge/payments-RevenueCat-F25A5A)
+
 One 5-minute lesson a day. Today's lesson is always free; unlocking the
 archive (rereading past lessons, or catching up on ones you missed) requires
 a RevenueCat-powered subscription.
@@ -12,6 +18,18 @@ whit/
 ├── backend/               Express + SQLite API (auth, lessons, billing)
 └── REVENUECAT_SETUP.md    Step-by-step RevenueCat dashboard walkthrough
 ```
+
+## How it works
+
+```
+Expo app ──(JWT)──► Express API ──► SQLite (users, lessons, progress)
+   │                    ▲  │
+   │ purchase           │  └── before serving any past lesson, re-checks the
+   ▼                    │      whit_pro entitlement with RevenueCat's REST API
+RevenueCat SDK ──► RevenueCat ──(webhook)──► /webhooks/revenuecat re-syncs the user
+```
+
+The paywall is enforced **on the server**, not just in the UI. Today's lesson is computed from whole UTC days since signup; anything older returns `402` unless RevenueCat confirms an active entitlement. A modified client can't unlock the archive.
 
 Read `REVENUECAT_SETUP.md` for the subscription/payment wiring. This file
 just gets both halves running locally.
@@ -46,7 +64,7 @@ cp .env.example .env
 
 npm install
 npm run seed     # loads the 30 lessons from data/lessons_source.json into SQLite
-npm test         # 11 tests, covers auth, the paywall gating rule, billing sync, webhooks
+npm test         # 16 tests: auth, paywall gating, day rollover, billing sync, webhooks
 npm start         # listens on PORT from .env (default 4100)
 ```
 

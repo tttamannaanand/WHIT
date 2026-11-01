@@ -25,7 +25,8 @@ app.use('/lessons', lessonsRouter);
 // /webhooks/revenuecat) so it's mounted at the root once.
 app.use('/', billingRouter);
 
-app.use((err, req, res, next) => {
+// 4 args is how Express recognises an error handler, so _next must stay
+app.use((err, req, res, _next) => {
   console.error(err);
   res.status(500).json({ error: 'Internal server error' });
 });
