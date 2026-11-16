@@ -46,7 +46,7 @@ cp .env.example .env
 
 npm install
 npm run seed     # loads the 30 lessons from data/lessons_source.json into SQLite
-npm test         # 11 tests, covers auth, the paywall gating rule, billing sync, webhooks
+npm test         # 16 tests, covers auth, the paywall gating rule, billing sync, webhooks, lesson day rollover
 npm start         # listens on PORT from .env (default 4100)
 ```
 
